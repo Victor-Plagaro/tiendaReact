@@ -2,5 +2,44 @@
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
 }
+  
+.logo h1 {
+    font-size: 1.5rem;
+    color: #a1a1a1;
+}
+
+.navbar-top .list-navbar {
+    display: flex;
+    gap: 50px; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-top .list-navbar li {
+    font-size: 1rem;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.navbar-top .list-navbar li:hover {
+    color: #007bff; /* Color al pasar el mouse */
+}
+
+.login span {
+    font-size: 1rem;
+    color: #007bff;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.login span:hover {
+    color: #0056b3;
+}
+  
