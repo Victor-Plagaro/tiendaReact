@@ -5,7 +5,6 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
 }
   
 .logo h1 {
@@ -29,7 +28,13 @@
 }
 
 .navbar-top .list-navbar li:hover {
-    color: #007bff; /* Color al pasar el mouse */
+    color: #007bff; 
+}
+
+.login{
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .login span {

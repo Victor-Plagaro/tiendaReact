@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import "./Products.css"
+import "../styles/Products.css"
 
 function Products() {
   const [products, setProducts] = useState([]); // Estado para almacenar los productos

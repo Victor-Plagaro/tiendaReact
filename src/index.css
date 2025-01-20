@@ -26,6 +26,8 @@ body {
   margin: 0;
   min-width: 100vw;
   min-height: 100vh;
+  background-color: var(--background);
+  color: var(--text-primary);
 }
 
 h1 {
@@ -63,4 +65,14 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+[data-theme='light'] {
+  --background: #f2f2f2;
+  --text-primary: #0f0f0f;
+  --text-secondary: #4e4e4e;
+  --accent: #dfb017;
+  --accent-hover: #cea315; 
+  --border: #1f1e1e;
+  --shadow: 7px 15px 13px -4px #00000056;
 }
