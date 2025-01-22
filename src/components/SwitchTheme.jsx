@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import "../styles/SwitchTheme.css";
+import "../styles/switchTheme.css";
 import { ThemeContext } from './ThemeContext';
 
 export const Switch = () => {

@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom";
-import "../styles/Header.css";
+import "../styles/header.css";
 import { Switch } from "./SwitchTheme";
 import { ThemeProvider } from "./ThemeContext";
 
-export function Header() {
+export function header() {
   return (
     <ThemeProvider>
       <header className="header">
@@ -12,10 +12,18 @@ export function Header() {
         </div>
         <nav className="navbar-top">
           <ol className="list-navbar">
-            <li><NavLink to='/tienda'>Tienda</NavLink></li>
-            <li>Nav2</li>
-            <li>Nav3</li>
-            <li>Contacto</li>
+            <li>
+              <NavLink to='/tienda'>Tienda</NavLink>
+            </li>
+            <li>
+              <NavLink to='/componentes'>Componentes</NavLink>
+            </li>
+            <li>
+              Nav3
+            </li>
+            <li>
+              Contacto
+            </li>
           </ol>
         </nav>
         <div className="login">
@@ -27,4 +35,4 @@ export function Header() {
   );
 }
 
-export default Header;
+export default header;

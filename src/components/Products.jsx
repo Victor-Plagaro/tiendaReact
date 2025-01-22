@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import "../styles/Products.css"
+import "../styles/products.css"
 
 function Products() {
   const [products, setProducts] = useState([]); // Estado para almacenar los productos
@@ -52,4 +52,4 @@ function Products() {
   );
 }
 
-export default Products;
+export default Products; // Cambiado a mayúscula inicial
