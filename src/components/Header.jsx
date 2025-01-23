@@ -3,7 +3,7 @@ import "../styles/header.css";
 import { Switch } from "./SwitchTheme";
 import { ThemeProvider } from "./ThemeContext";
 
-export function header() {
+export function Header() {
   return (
     <ThemeProvider>
       <header className="header">
@@ -28,11 +28,13 @@ export function header() {
         </nav>
         <div className="login">
           <Switch />
-          <span>Login</span>
+          <span> 
+            <NavLink to='/login'>Login</NavLink>
+          </span>
         </div>
       </header>
     </ThemeProvider>
   );
 }
 
-export default header;
+export default Header;
