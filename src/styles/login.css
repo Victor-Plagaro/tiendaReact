@@ -79,3 +79,9 @@
 .login-box a:hover {
     text-decoration: underline;
 }
+
+[data-theme='dark'] {
+    .login-form {
+        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5); /* Cambiado a blanco */
+    }
+}

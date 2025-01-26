@@ -1,55 +1,58 @@
-import React, { useEffect, useState } from "react"
-import "../styles/products.css"
+import React, { useEffect, useState } from 'react';
+import '../styles/products.css';
+import { AddToCartIcon, RemoveFromCartIcon } from './Icons.jsx';
+import { useCart } from '../hooks/useCart.js';
 
-function Products() {
-  const [products, setProducts] = useState([]); // Estado para almacenar los productos
-  const [loading, setLoading] = useState(true); // Estado para gestionar el indicador de carga
-  const [error, setError] = useState(null); // Estado para manejar errores
+// Componente Products que muestra una lista de productos
+export function Products() {
+  // Obtiene las funciones y el estado del carrito desde el hook useCart
+  const { addToCart, removeFromCart, cart } = useCart();
+  // Estado local para almacenar los productos
+  const [products, setProducts] = useState([]);
 
+  // useEffect para obtener los productos de una API cuando el componente se monta
   useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const res = await fetch("https://fakestoreapi.com/products");
-        if (!res.ok) {
-          throw new Error("Error al obtener los datos");
-        }
-        const data = await res.json();
-        setProducts(data); // Guardar los productos en el estado
-      } catch (err) {
-        setError(err.message); // Guardar el error en caso de fallo
-      } finally {
-        setLoading(false); // Desactivar el indicador de carga
-      }
-    };
-  
-    fetchProducts();
+    fetch('https://fakestoreapi.com/products')
+      .then(res => res.json())
+      .then(data => setProducts(data));
   }, []);
-  
-  if (loading) {
-    return <p>Cargando productos...</p>; // Mostrar mensaje mientras se cargan los productos
-  }
 
-  if (error) {
-    return <p>Error: {error}</p>; // Mostrar error si ocurre
-  }
+  // Función para verificar si un producto está en el carrito
+  const checkProductInCart = product => {
+    return cart.some(item => item.id === product.id);
+  };
 
   return (
-    <main className="products">
+    <main className='products'>
       <ul>
-        {products.map((product) => (
-          <li key={product.id} className="product-card">
-            <img src={product.image} alt={product.title} width="100" />
-            <div>
-                <strong>{product.title} - {product.price}</strong>
-            </div>
-            <div>
-                <button>Add buy</button>
-            </div>
-          </li>
-        ))}
+        {/* Mapea los primeros 10 productos y renderiza un elemento de lista para cada uno */}
+        {products.slice(0, 10).map(product => {
+          // Verifica si el producto está en el carrito
+          const isProductInCart = checkProductInCart(product);
+
+          return (
+            <li key={product.id}>
+              {/* Imagen del producto */}
+              <img src={product.image} alt={product.title} />
+              <div>
+                {/* Título y precio del producto */}
+                <strong>{product.title}</strong> - ${product.price}
+              </div>
+              <div>
+                {/* Botón para añadir o remover el producto del carrito */}
+                <button
+                  onClick={() => {
+                    isProductInCart ? removeFromCart(product.id) : addToCart(product);
+                  }}
+                >
+                  {/* Icono que cambia según si el producto está en el carrito */}
+                  {isProductInCart ? <RemoveFromCartIcon /> : <AddToCartIcon />}
+                </button>
+              </div>
+            </li>
+          );
+        })}
       </ul>
     </main>
   );
 }
-
-export default Products; // Cambiado a mayúscula inicial
