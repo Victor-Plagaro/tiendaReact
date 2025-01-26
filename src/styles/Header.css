@@ -5,6 +5,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 10px 0;
 }
   
 .logo h1 {
@@ -47,4 +48,4 @@
 .login span:hover {
     color: #0056b3;
 }
-  
+

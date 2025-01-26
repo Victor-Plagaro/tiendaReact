@@ -4,12 +4,12 @@ import { CartIcon, ClearCartIcon } from './Icons.jsx'
 import { useCart } from '../hooks/useCart.js'
 
 // Componente CartItem que representa un producto en el carrito
-function CartItem ({ thumbnail, price, title, quantity, addToCart }) {
+function CartItem ({ image, price, title, quantity, addToCart }) {
   return (
     <li>
       {/* Imagen del producto */}
       <img
-        src={thumbnail}
+        src={image}
         alt={title}
       />
       <div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from "react-router-dom";
 import "../styles/header.css";
 import { Switch } from "./SwitchTheme";
@@ -6,6 +6,7 @@ import { ThemeProvider } from "./ThemeContext";
 import { Cart } from './Cart';
 
 export const Header = () => {
+
   return (
     <ThemeProvider>
       <header className="header">
@@ -21,7 +22,7 @@ export const Header = () => {
               <NavLink to='/componentes'>Componentes</NavLink>
             </li>
             <li>
-              Nav3
+              Nav 3
             </li>
             <li>
               Nav 4
