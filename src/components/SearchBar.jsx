@@ -36,7 +36,7 @@ const SearchBar = () => {
 const Hit = ({ hit }) => (
   <div>
     <img src={hit.image} alt={hit.name} className="product-image" />
-    <h4 className="product-title">{hit.name}</h4>
+    <h4 className="product-title">{hit.title}</h4>
     <p className="product-price">{hit.price}</p>
   </div>
 );

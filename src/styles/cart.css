@@ -38,6 +38,9 @@
   height: 32px;
   justify-content: center;
   padding: 4px;
+  position: absolute;
+  right: 18px;
+  top: 18px;
   transition: all .3s ease;
   width: 32px;
   z-index: 9999;
