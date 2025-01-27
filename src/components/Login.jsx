@@ -1,14 +1,26 @@
-import React, { useState } from 'react';
-import "../styles/Login.css";
+import React, { useState, useContext } from 'react'; // Importamos React y algunos hooks
+import { useNavigate } from 'react-router-dom'; // Importamos useNavigate para la navegación
+import { AuthContext } from '../context/AuthContext'; // Importamos el contexto de autenticación
+import "../styles/Login.css"; // Importamos los estilos CSS
 
 const Login = () => {
+    // Definimos los estados locales para email y password
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    
+    // Obtenemos la función setAuthenticated del contexto de autenticación
+    const { setAuthenticated } = useContext(AuthContext);
+    
+    // Obtenemos la función navigate para redirigir al usuario
+    const navigate = useNavigate();
 
+    // Función que se ejecuta al enviar el formulario
     const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log('Email:', email);
-        console.log('Password:', password);
+        e.preventDefault(); // Prevenimos el comportamiento por defecto del formulario
+        console.log('Email:', email); // Imprimimos el email en la consola
+        console.log('Password:', password); // Imprimimos la contraseña en la consola
+        setAuthenticated(true); // Establecemos el estado de autenticación a verdadero
+        navigate('/perfil'); // Redirigimos al usuario a la página de perfil
     };
 
     return (
