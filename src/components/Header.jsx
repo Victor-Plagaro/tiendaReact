@@ -31,7 +31,7 @@ export const Header = () => {
         </nav>
         <div className="login">
           <Switch />
-          <span> 
+          <span>
             <NavLink to='/login'>Login</NavLink>
           </span>
         </div>
