@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink } from "react-router-dom";
 import "../styles/header.css";
 import { Switch } from "./SwitchTheme";
@@ -22,7 +22,7 @@ export const Header = () => {
               <NavLink to='/componentes'>Componentes</NavLink>
             </li>
             <li>
-              Nav 3
+              <NavLink to='/chatvoz'>Dictado por voz</NavLink>
             </li>
             <li>
               Nav 4

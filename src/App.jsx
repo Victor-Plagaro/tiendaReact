@@ -8,20 +8,23 @@ import Login from './components/Login';
 import Perfil from './components/Perfil';
 import { CartProvider } from './context/cart.jsx';
 import SearchBar from './components/SearchBar.jsx';
+import VoiceInput from './components/VoiceInput.jsx'; // reconomiento por voz
 
 function App() {
   return (
     <AuthProvider>
       <CartProvider>
-        <Header />
-        <SearchBar />
-        <Routes>
-          <Route path='/' element={<Products />} />
-          <Route path='/tienda' element={<Products />} />
-          <Route path='/componentes' element={<Componentes />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/perfil' element={<Perfil />} />
-        </Routes>
+          <Header />
+          <SearchBar />
+          <Routes>
+            <Route path='/' element={<Products />} />
+            <Route path='/tienda' element={<Products />} />
+            <Route path='/componentes' element={<Componentes />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/perfil' element={<Perfil />} />
+            <Route path='/chatvoz' element={<VoiceInput />} />
+          </Routes>
+
       </CartProvider>
     </AuthProvider>
   );
