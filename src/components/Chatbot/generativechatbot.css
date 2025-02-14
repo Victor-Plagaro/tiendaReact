@@ -1,0 +1,100 @@
+/* Contenedor principal del chat */
+.chatbox {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    max-height: 400px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #e0f7fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Contenedor de mensajes */
+  .messages {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+  }
+  
+  /* Mensajes del chat */
+  .message {
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Mensajes del usuario */
+  .message.user {
+    background-color: #b2ebf2;
+    align-self: flex-end;
+    text-align: right;
+  }
+  
+  /* Mensajes del modelo */
+  .message.model {
+    background-color: #80deea;
+    align-self: flex-start;
+    text-align: left;
+  }
+  
+  /* Formulario de entrada */
+  form {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  
+  /* Campo de entrada de texto */
+  input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-right: 0.5rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  /* Botón de envío */
+  button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background-color: #0288d1;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Efecto hover en el botón de envío */
+  button:hover {
+    background-color: #0277bd;
+  }
+  
+  /* Texto enviado */
+  .submitted-text {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  .submitted-text strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .submitted-text p {
+    font-size: 1rem;
+    color: #555;
+  }

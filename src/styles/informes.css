@@ -1,0 +1,98 @@
+/* Contenedor principal */
+.informes-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Título */
+.informes-container h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+/* Formulario */
+.informes-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* Etiquetas y selectores */
+.informes-container label {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  color: #34495e;
+}
+
+.informes-container select {
+  padding: 10px;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-top: 5px;
+  background-color: #ecf0f1;
+  color: #2c3e50;
+}
+
+/* Botón */
+.informes-container button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.informes-container button:hover {
+  background-color: #2980b9;
+}
+
+/* Resultados */
+.informes-container .resultados {
+  margin-top: 20px;
+}
+
+.informes-container .resultados h2 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.informes-container .resultados ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.informes-container .resultados li {
+  padding: 10px;
+  border-bottom: 1px solid #bdc3c7;
+  font-size: 1rem;
+  color: #34495e;
+}
+
+.informes-container .resultados li:last-child {
+  border-bottom: none;
+}
+
+/* Gráficos */
+.informes-container .graficos {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.informes-container .graficos > div {
+  width: 48%;
+}

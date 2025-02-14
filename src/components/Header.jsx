@@ -25,7 +25,10 @@ export const Header = () => {
               <NavLink to='/chatvoz'>Dictado por voz</NavLink>
             </li>
             <li>
-              Nav 4
+              <NavLink to='/chatbot'>Chatbot</NavLink>
+            </li>
+            <li>
+              <NavLink to='/informes'>Informes</NavLink>
             </li>
           </ol>
         </nav>
