@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import 'regenerator-runtime/runtime'; // reconocimiento por voz
+import 'regenerator-runtime/runtime'; 
 import SpeechRecognition, { useSpeechRecognition } from "react-speech-recognition";
 import "./styles/voiceInput.css";
 
