@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
-import "../styles/header.css";
 import { Switch } from "./SwitchTheme";
 import { ThemeProvider } from "./ThemeContext";
 import { Cart } from './Cart';
