@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import './styles/products.css'; 
 import { AddToCartIcon, RemoveFromCartIcon } from './Icons.jsx';
 import { useCart } from '../hooks/useCart.js';
 
