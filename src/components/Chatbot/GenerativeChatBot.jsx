@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { AIContext } from './AIContext';
-import "./GenerativeChatBot.css";
+import "./generativechatbot.css";
 
 const GenerativeChatBot = () => {
   const { messages, sendMessage, products } = useContext(AIContext);
