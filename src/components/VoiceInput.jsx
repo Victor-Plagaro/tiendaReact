@@ -62,6 +62,7 @@ const VoiceInput = () => {
         >
           Detener
         </button>
+        <button onClick={resetTranscript} className="speech-button reset">Reset</button>
       </div>
       {submittedText && (
         <div className="submitted-text">
@@ -69,6 +70,7 @@ const VoiceInput = () => {
           <p>{submittedText}</p>
         </div>
       )}
+      <p>{transcript}</p>
     </div>
   );
 };
