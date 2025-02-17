@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { InstantSearch, SearchBox, Hits } from 'react-instantsearch-dom';
 import { algoliaConfig } from '../config/algoliaConfig';
 import Modal from './Modal';
-import '../styles/searchbar.css';
+import './styles/searchbar.css';
 
 const SearchBar = () => {
   const [isModalOpen, setModalOpen] = useState(false);

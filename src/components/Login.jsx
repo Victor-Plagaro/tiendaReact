@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react'; // Importamos React y algunos hooks
 import { useNavigate } from 'react-router-dom'; // Importamos useNavigate para la navegación
 import { AuthContext } from '../context/AuthContext'; // Importamos el contexto de autenticación
-import "../styles/Login.css"; // Importamos los estilos CSS
+import "./styles/Login.css"; // Importamos los estilos CSS
 
 const Login = () => {
     // Definimos los estados locales para email y password

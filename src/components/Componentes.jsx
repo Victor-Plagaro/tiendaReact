@@ -1,5 +1,5 @@
 // Importamos los estilos CSS y el ThemeProvider
-import "../styles/componentes.css";
+import "./styles/componentes.css";
 import { ThemeProvider } from "./ThemeContext";
 import { useState } from "react";
 

@@ -5,7 +5,7 @@ import 'jspdf-autotable';
 import { Bar, Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, ArcElement } from 'chart.js';
 import championsCSV from '../data/champions.csv';
-import '../styles/informes.css'; // Importa el archivo CSS
+import './styles/informes.css'; // Importa el archivo CSS
 
 // Registra las escalas necesarias
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, ArcElement);
